@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function showParticipationRules() {
+            alert("Регистрация на нашей платформе\nПриглашай друзей и получай дополнительные шансы на выигрыш!\nПобедители будут объявлены 5 сентября 2024 года.\nНе упусти свой шанс! Участвуй прямо сейчас и выиграй!");
+        }
+    </script>
+</head>
+<style>
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 25px; /* Кривые закругленные формы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.header {
+    background-color: orange;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-weight: bold;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+    color: #555;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: .75rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+</style>
+    <div class="container">
+        <div class="header">
+            <h1>АНКЕТА РЕГИСТРАЦИИ НА НАШЕЙ ПЛАТФОРМЕ</h1>
+        </div>
+        <p>Призы за первое, второе, третье место:</p>
+        <ul>
+            <li>I место - 50 000 000 криптомонет</li>
+            <li>II место - 30 000 000 криптомонет</li>
+            <li>III место - 20 000 000 криптомонет</li>
+        </ul>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username: <span onclick="showParticipationRules()" style="cursor:pointer; color:blue;">?</span></label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <p>Приглашай друзей и получай дополнительные шансы на выигрыш!</p>
+        <p>Победители будут объявлены 5 сентября 2024 года.</p>
+        <p>Не упусти свой шанс! Участвуй прямо сейчас и выиграй!</p>
+    </div>
+</body>
+</html>
